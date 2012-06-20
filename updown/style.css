@@ -2,7 +2,7 @@
     -moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;
     -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.2);-webkit-box-shadow:0 1px  1px rgba(0, 0, 0, 0.2);box-shadow:0 1px 1px rgba(0, 0, 0, 0.2);
     background:#eee;
-    width:110px;
+    width:113px;
     border:0;
     color:#333;
     cursor:pointer;
@@ -17,17 +17,26 @@
     border:5px solid #eee;background:#eee;
     -moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;
     width:100px;
-    height:100px;
+    height:50px;
     padding:5px;
     margin:1px 0
 }
 tr{
     width:100px;
-    height:100px;
+    height:50px;
     border:5px;
 }
 td{
     width:100px;
-    height:100px
+    height:50px
     border:5px;
+}
+
+.example3 p, .example4 p{
+    border:0px solid #eee;background:white;
+    -moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;
+    width:110px;
+    height:50px;
+    padding:5px;
+    margin:1px 0
 }
