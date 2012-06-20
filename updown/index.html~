@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Hiowatha</title>
+<link rel="icon" href="../web/images/famCross.gif" type="image/gif" >
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="iphone-style-checkboxes.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+    $("#p1").text("hello");
+    $('.example1').hide().before('<a href="#" id="open-example1" class="button" >Close &darr;</a>');
+    $('.example1').append('<a href="#" id="close-example1" class="button" >Open &uarr;</a>');
+    $('a#open-example1').click(function() {
+        $('.example1').slideDown(1000);
+        $('#open-example1').fadeOut(500);
+        $('p2').html("garage door is closed");
+        return false;
+    });
+    $('a#close-example1').click(function() {
+        $('.example1').slideUp(1000);
+        $('#open-example1').fadeIn(500);
+        $('p1').html("garage door is open");
+        return false;
+    });
+    $('.example2').hide().before('<a href="#" id="open-example2" class="button" >Close &darr;</a>');
+    $('.example2').append('<a href="#" id="close-example2" class="button" >Open &uarr;</a>');
+    $('a#open-example2').click(function() {
+        $('.example2').slideDown(1000);
+        $('#open-example2').fadeOut(500);
+        return false;
+    });
+    $('a#close-example2').click(function() {
+        $('.example2').slideUp(1000);
+        $('#open-example2').fadeIn(500);
+        return false;
+    });
+});
+
+</script>
+    </head> 
+
+<body> 
+
+    <table >
+        <tr>
+            <td>
+            <p id=p0>Door 1</p>
+            <div class="example1">
+                <p id=p1>Door 1 currently open</p>
+            </div>
+            </td>
+        <td>
+            <p id=p2 align=center>Door 2</p>
+            <div class="example2">
+                <p id=p3>Door 2: Closed</p>
+            </div>
+        </td>
+        </tr>
+
+</table>
+
+</body>
+
+</html>
+

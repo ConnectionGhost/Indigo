@@ -57,14 +57,19 @@ $(window).load(function() {
     </tr>
     -->
 
-    <tr class="css_sized_container">
+    <!--<tr class="css_sized_container">
         <th><label for="css_sized_container">Door 1</label></th>
         <td>
             <input type="checkbox" id="css_sized_container" style="width: 300px;">
         </td>
     </tr>
+    -->
     <tr class="on_off">
-        <th><label for="on_off">Door 1</label></th>
+        <tr><th><label for="on_off">Door 1</label></th></tr>
+        <td>
+            <input type="checkbox" id="on_off" />
+        </td>
+        <th><label for="on_off">Door 2</label></th>
         <td>
             <input type="checkbox" id="on_off" />
         </td>
