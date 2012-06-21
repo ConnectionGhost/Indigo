@@ -2,119 +2,81 @@
 <html> 
     <head> 
         <title>Hiowatha</title>
-<link rel="icon" href="images/famCross.gif" type="image/gif" >
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="iphone-style-checkboxes.js" type="text/javascript" charset="utf-8"></script>
-	<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
-<style type="text/css">
-    body {
-      padding: 10px; }
-    th {
-      text-align: right;
-      padding: 5px;
-      padding-right: 15px;
-      vertical-align: top; }
-    .css_sized_container .iPhoneCheckContainer {
-      width: 100px; }
-  </style>	    
+        <link rel="icon" href="../../../images/famCross.gif" type="image/gif" >
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="../../jquery-mobile/css/themes/default/jquery.mobile.css" />
+	<script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile.js"></script>
+        <style media="screen" type="text/css">
 
-<script type="text/javascript" charset="utf-8">
-$(window).load(function() {
+            tr{
+                font-weight: bold;
+                background: white;
+                width:215px;
+                display:block;
+                padding:10px;
+            }
 
-    $('.on_off :checkbox').iphoneStyle();
-    $('.disabled :checkbox').iphoneStyle();
-    $('.css_sized_container :checkbox').iphoneStyle({
-        resizeContainer: false,
-        resizeHandle: false
-    });
-    $('.long_tiny :checkbox').iphoneStyle({
-        checkedLabel: 'Very Long Text',
-        uncheckedLabel: 'Tiny'
-    });
-    var onchange_checkbox = ($('.onchange :checkbox')).iphoneStyle({
-        onChange: function(elem, value) {
-            $('span#status').html(value.toString());
-        }
-    });
-    setInterval(function() {
-        onchange_checkbox.prop('checked', !onchange_checkbox.is(':checked')).iphoneStyle("refresh");
-        return
-    }, 2500);
-
-});
-</script>
+        </style>
+        
     </head> 
 
-<body> 
-<table>
-    <!--    
-    <tr class="disabled">
-        <th><label for="disabled">Disabled</label></th>
-        <td>
-            <input type="checkbox" id="disabled" disabled="disabled" />
-        </td>
-    </tr>
-    -->
+    <body bgcolor=gray>
+        <br>
+        <br>
+        <center> 
+        <table>
+            <tr>
+            <td>
+                Garage door 1
+            </td>
+            <td>
+                <select name="slider" id="flip-a" data-role="slider">
+                <option value="open">Open</option>
+                <option value="close">Close</option>
+                </select> 
+            </td>
+        </tr>
 
-    <!--<tr class="css_sized_container">
-        <th><label for="css_sized_container">Door 1</label></th>
-        <td>
-            <input type="checkbox" id="css_sized_container" style="width: 300px;">
-        </td>
-    </tr>
-    -->
-    <tr class="on_off">
-        <th><label for="on_off">Door 1</label></th>
-        <td>
-            <input type="checkbox" id="on_off" />
-        </td>
-        <th><label for="on_off">Door 2</label></th>
-        <td>
-            <input type="checkbox" id="on_off" />
-        </td>
-    </tr>
-    <tr class="on_off">
-        <th><label for="on_off">Light</label></th>
-        <td>
-            <input type="checkbox" id="on_off" />
-        </td>
-    </tr>
-    <tr class="on_off">
-        <th><label for="on_off_on">Door 2</label></th>
-        <td>
-            <input type="checkbox" checked="checked" id="on_off_on"/>
-        </td>
-    </tr>
-    <tr class="on_off">
-        <th><label for="on_off_on">Light</label></th>
-        <td>
-            <input type="checkbox" checked="checked" id="on_off_on"/>
-        </td>
-    </tr>
-    
-    <!--
-    <tr class="long_tiny">
-        <th><label class="left" for="long_tiny">Long and short labels</label></th>
-        <td>
-            <input type="checkbox" id="long_tiny" />
-        </td>
-    </tr>
+            <tr>
+            <td>
+                Garage light 1
+            </td>
+            <td>
+                <select name="slider" id="flip-aa" data-role="slider" data-theme="e">
+                <option value="on">On</option>
+                <option value="off">Off</option>
+                </select> 
+            </td>
+            </tr>
 
-    <tr class="onchange">
-        <th>Event tracking</th>
-        <td>
-            <input type="checkbox" id="onchange" />
-            <p>Checkbox status is <strong><span id="status">...</span></strong>.</p>
-        </td>
-    </tr>
-    -->
 
+
+        <tr>
+            <td>
+                Garage door 2
+            </td>
+            <td>
+                <select name="slider" id="flip-b" data-role="slider">
+                <option value="open">Open</option>
+                <option value="close">Close</option>
+                </select> 
+            </td>
+        </tr>
+            <tr>
+            <td>
+                Garage light 2
+            </td>
+            <td>
+                <select name="slider" id="flip-bb" data-role="slider" data-theme="e">
+                <option value="on">On</option>
+                <option value="off">Off</option>
+                </select> 
+            </td>
+            </tr>
 </table>
-
-
-</body>
-
+</center>
+    </body>
 </html>
 
 
