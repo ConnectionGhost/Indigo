@@ -5,80 +5,114 @@
         <link rel="icon" href="../../../images/famCross.gif" type="image/gif" >
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link rel="stylesheet" href="../../jquery-mobile/css/themes/default/jquery.mobile.css" />
-	<script src="js/jquery.js"></script>
-        <script src="js/jquery.mobile.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.mobile-1.1.0.min.js"></script>
         <style media="screen" type="text/css">
-
-            tr{
+            
+        
+            
+            tr
+            {
                 font-weight: bold;
                 background: white;
-                width:215px;
+                width:300px;
                 display:block;
-                padding:10px;
+                padding:5px;
             }
 
+            td.line
+            {
+                border-top: 1px solid black; 
+            }
+
+            div.example
+            {
+                width:315px;
+                background-color: white;
+                border-radius: 15px 15px 15px 15px;
+                margin-right: 1px;
+                margin-top: 1px;
+                padding: 1px;
+                text-align: center;
+                
+            }
+
+
         </style>
-        
     </head> 
 
-    <body bgcolor=gray>
-        <center> 
-        <table>
-            <tr>
-            <td>
-                Garage door 1
-            </td>
-            <td>
-                <select name="slider" id="flip-a" data-role="slider">
-                <option value="open">Open</option>
-                <option value="close">Close</option>
-                </select> 
-            </td>
-        </tr>
+    <body bgcolor=lightgray>
+        <br>
+        <center>
+            <div class="example"> 
+            <table >
+                <tr>
+                    <td>
+                       Garage door 1
+                    </td>
 
-            <tr>
-            <td>
-                Garage light 1
-            </td>
-            <td>
-                <select name="slider" id="flip-aa" data-role="slider" data-theme="e">
-                <option value="on">On</option>
-                <option value="off">Off</option>
-                </select> 
-            </td>
-            </tr>
+                    <td width=75px display:block>
+                    </td>
 
+                    <td>
+                        <select name="slider" id="flip-a" data-role="slider">
+                            <option value="close">CLOSE</option>
+                            <option value="open">OPEN</option>
+                        </select> 
+                    </td>
+                </tr>
+                
 
+                <tr>
+                    <td class="line">
+                        Garage light 1
+                    </td>
+                    <td width=75px display:block class=line>
+                    </td>
+                    <td class=line>
+                        <select name="slider" id="flip-aa" data-role="slider" >
+                            <option value="off">OFF</option>
+                            <option value="on">ON</option>
+                        </select> 
+                    </td>
+                </tr>
+                <tr>
+                    <hr size=1>
+                </tr>
 
-        <tr>
-            <td>
-                Garage door 2
-            </td>
-            <td>
-                <select name="slider" id="flip-b" data-role="slider">
-                <option value="open">Open</option>
-                <option value="close">Close</option>
-                </select> 
-            </td>
-        </tr>
-            <tr>
-            <td>
-                Garage light 2
-            </td>
-            <td>
-                <select name="slider" id="flip-bb" data-role="slider" data-theme="e">
-                <option value="on">On</option>
-                <option value="off">Off</option>
-                </select> 
-            </td>
-            </tr>
-</table>
-</center>
-    </body>
+                <tr>
+                    <td class=line>
+                        Garage door 2
+                    </td>
+                    <td class=line width=75px display:block>
+                    </td>
+                    <td class=line>
+                        <select name="slider" id="flip-b" data-role="slider">
+                            <option value="close">CLOSE</option>
+                            <option value="open">OPEN</option>
+                        </select> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Garage light 2
+                    </td>
+                    <td width=75px display:block>
+                    </td>
+                    <td>
+                        <select name="slider" id="flip-bb" data-role="slider" >
+                            <option value="off">OFF</option>
+                            <option value="on">ON</option>
+                        </select> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </center>
+</body>
+
 </html>
-
-
-
 
 
 

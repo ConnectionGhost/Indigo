@@ -1,8 +1,8 @@
 <!DOCTYPE html> 
 <html> 
     <head> 
-        <title>Hiowatha</title>
-        <link rel="icon" href="../../../images/famCross.gif" type="image/gif" >
+        <title>Indigo Automation v3.0</title>
+        <link rel="icon" href="images/famCross.gif" type="image/gif" >
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link rel="stylesheet" href="../../jquery-mobile/css/themes/default/jquery.mobile.css" />
         <script src="js/jquery.min.js"></script>
@@ -15,28 +15,30 @@
             {
                 font-weight: bold;
                 background: white;
-                width:300px;
+                width:250px;
                 display:block;
-                padding:5px;
+                padding:0px;
             }
 
             td.line
             {
-                border-top: 1px solid black; 
             }
 
             div.example
             {
-                width:315px;
+                width:260px;
                 background-color: white;
                 border-radius: 15px 15px 15px 15px;
                 margin-right: 1px;
+                margin-left: 1px;
                 margin-top: 1px;
                 padding: 1px;
                 text-align: center;
-                
             }
-
+            h1
+            {
+                text-align:left;
+            }
 
         </style>
     </head> 
@@ -51,7 +53,7 @@
                        Garage door 1
                     </td>
 
-                    <td width=75px display:block>
+                    <td width=25px display:block>
                     </td>
 
                     <td>
@@ -61,13 +63,18 @@
                         </select> 
                     </td>
                 </tr>
-                
+            </table>
 
+            <table>
+            <hr size=1>
+            </table>
+
+            <table>    
                 <tr>
                     <td class="line">
                         Garage light 1
                     </td>
-                    <td width=75px display:block class=line>
+                    <td width=25px display:block class=line>
                     </td>
                     <td class=line>
                         <select name="slider" id="flip-aa" data-role="slider" >
@@ -76,15 +83,17 @@
                         </select> 
                     </td>
                 </tr>
-                <tr>
-                    <hr size=1>
-                </tr>
+            </table>
+            <table>
+            <hr size=1>
+            </table>
 
+            <table>
                 <tr>
                     <td class=line>
                         Garage door 2
                     </td>
-                    <td class=line width=75px display:block>
+                    <td class=line width=25px display:block>
                     </td>
                     <td class=line>
                         <select name="slider" id="flip-b" data-role="slider">
@@ -93,11 +102,17 @@
                         </select> 
                     </td>
                 </tr>
+            </table>
+            <table>
+            <hr size=1>
+            </table>
+
+                <table>
                 <tr>
                     <td>
                         Garage light 2
                     </td>
-                    <td width=75px display:block>
+                    <td width=25px display:block>
                     </td>
                     <td>
                         <select name="slider" id="flip-bb" data-role="slider" >
@@ -108,8 +123,11 @@
                 </tr>
             </table>
         </div>
-
     </center>
+    <div data-role="footer" data-position="fixed" text-align="left">
+        <h1> Indigo Automation    </h1><a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+</div>
+    
 </body>
 
 </html>
