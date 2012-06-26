@@ -8,9 +8,6 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.mobile-1.1.0.min.js"></script>
         <style media="screen" type="text/css">
-            
-        
-            
             tr
             {
                 font-weight: bold;
@@ -35,11 +32,6 @@
                 padding: 1px;
                 text-align: center;
             }
-            h1
-            {
-                text-align:left;
-            }
-
         </style>
     </head> 
 
@@ -49,18 +41,14 @@
             <div class="example"> 
             <table >
                 <tr>
-                    <td>
-                       Garage door 1
-                    </td>
-
-                    <td width=25px display:block>
+                    <td width=50%>
+                    Text Me Timer
                     </td>
 
                     <td>
-                        <select name="slider" id="flip-a" data-role="slider">
-                            <option value="close">CLOSE</option>
-                            <option value="open">OPEN</option>
-                        </select> 
+                        <div data-role="fieldcontain">
+                            <input type="number" name="timer" id="timer" value="" style="width:50%" />
+                        </div>	
                     </td>
                 </tr>
             </table>
@@ -68,64 +56,47 @@
             <table>
             <hr size=1>
             </table>
-
-            <table>    
+             <table >
                 <tr>
-                    <td class="line">
-                        Garage light 1
+                    <td width=50%>
+                    Provider
                     </td>
-                    <td width=25px display:block class=line>
-                    </td>
-                    <td class=line>
-                        <select name="slider" id="flip-aa" data-role="slider" >
-                            <option value="off">OFF</option>
-                            <option value="on">ON</option>
-                        </select> 
+
+                    <td width=50%>
+                        <div data-role="fieldcontain" >
+                           <select name="select-choice-1" id="select-choice-1">
+                              <option value="att">AT&T</option>
+                              <option value="tmobile">tMobile</option>
+                              <option value="verizon">Verizon</option>
+                              <option value="sprint">Sprint</option>
+                           </select>
+                        </div>
                     </td>
                 </tr>
             </table>
             <table>
             <hr size=1>
             </table>
-
-            <table>
+             <table >
                 <tr>
-                    <td class=line>
-                        Garage door 2
+                    <td width=50%>
+                    Telephone
                     </td>
-                    <td class=line width=25px display:block>
-                    </td>
-                    <td class=line>
-                        <select name="slider" id="flip-b" data-role="slider">
-                            <option value="close">CLOSE</option>
-                            <option value="open">OPEN</option>
-                        </select> 
+
+                    <td>
+                        <div data-role="fieldcontain">
+                            <input type="tel" name="telephone" id="telephone" value="" style="width:90%" />
+                        </div>	
                     </td>
                 </tr>
             </table>
-            <table>
-            <hr size=1>
-            </table>
 
-                <table>
-                <tr>
-                    <td>
-                        Garage light 2
-                    </td>
-                    <td width=25px display:block>
-                    </td>
-                    <td>
-                        <select name="slider" id="flip-bb" data-role="slider" >
-                            <option value="off">OFF</option>
-                            <option value="on">ON</option>
-                        </select> 
-                    </td>
-                </tr>
-            </table>
         </div>
     </center>
-    <div data-role="footer" data-position="fixed" text-align="left">
-        <h1> Indigo </h1><a href="index2.html" data-icon="gear" class="ui-btn-right">Options</a>
+    <div data-role="footer" data-theme="f" data-position="fixed">
+        <a href="index.html" data-icon="delete" class="ui-btn-left">Cancel</a>
+            <h6>Options</h6>
+	<a href="index.html" data-icon="check" class="ui-btn-right">Save</a>
 </div>
     
 </body>
