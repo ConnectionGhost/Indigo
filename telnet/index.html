@@ -1,0 +1,92 @@
+<html>
+<head>
+	
+	<title>haXe Flash</title>
+
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css" type="text/css" rel="Stylesheet" />
+
+	<script src="json2.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>		
+	<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>		
+
+	<script src="BlobBuilder.js"></script>
+	<script src="FileSaver.js"></script>
+	
+	<link href="boilerplate.css" rel='stylesheet' type='text/css'>	
+	<link href='http://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+	<link href="telnet.css" type="text/css" rel="Stylesheet" />
+	
+	<script src="jquery.telnet.js"></script>
+		
+</head>
+
+<body>
+
+
+
+
+
+<div id="telnetTest"></div>
+
+<input type="file" id="load_profile" style="text-indent:-500px;" name="profile" />
+
+<script type="text/javascript">
+
+
+	var loadBtn = $('<a id="loadBtn" class="button" href="javascript:void(0);">Load</a>').click(function(){
+		$('#load_profile').trigger('click');
+	});
+	
+	var saveBtn = $('<a id="saveBtn" class="button" href="javascript:void(0);">Save</a>').click(function(){
+		var x = { hello: "world!", how: "you going?" };		
+		var bb = new BlobBuilder;
+		bb.append(JSON.stringify(x));
+		saveAs(bb.getBlob("text/plain;charset=utf-8"), "telnet_settings.json");		
+		
+	});
+	
+	$('#load_profile').change(function(evt){
+		
+		if (evt.target.files.length == 1) {
+			
+			var stFile = evt.target.files[0];
+			
+			var reader = new FileReader();
+
+			  // Closure to capture the file information.
+		      reader.onload = function(e) {
+			       console.log(JSON.parse(this.result));			        
+		      };
+
+
+		      reader.readAsText(stFile);
+		  
+			
+		}
+		
+	});
+
+	$('#telnetTest').telnet({host:'vault-thirteen.net', port:4000});
+
+	$('#telnetTest div.commandBar')
+		.append(saveBtn)
+		.append(loadBtn)
+	;
+	
+	$('.button').button();
+	
+	$('#telnetTest').telnet('resize');
+		
+	$('#telnetTest').bind('parse_prompt.telnet', function(evt,txt){
+		 if(txt.match(/Choice:/)) { $('#telnetTest').telnet('sendText','TestUnit') }
+		 if(txt.match(/Password:/)) { $('#telnetTest').telnet('sendText','password1') }
+	})
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+-swf9 telnetBridge.swf
+-swf-version 10
+-D network-sandbox
+-main Telnet
